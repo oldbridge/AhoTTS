@@ -285,7 +285,10 @@ CtI WdChop::parserEmo(pCHAR fltbuff, BOOL flush)
 
 	//Salida de la función.
 	CtI salida;
-
+	
+	// Asigna un valor a salida para evitar errores runtime
+	salida = ct.lastGrp();
+	
 	if (flush)
 	{
 		if (labelStarted)
